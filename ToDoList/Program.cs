@@ -20,7 +20,7 @@ namespace ToDoList.Models
 
       Item newItem = new Item(description);
       List<Item> newList = new List<Item> {newItem};
-
+      int x = 0;
       for (int i = 0; x == 0; i++)
       {
         Console.WriteLine("Would you like to add another item or view list? (Add/View/Q)");
@@ -31,10 +31,10 @@ namespace ToDoList.Models
         {
           Console.WriteLine("Add new Item to your To-Do List:");
 
-          string description = Console.ReadLine();
+          string description2 = Console.ReadLine();
 
-          Item newItem = new Item(description);
-          List<Item> newList = new List<Item> {newItem};
+          Item newItem2 = new Item(description2);
+          // List<Item> newList = new List<Item> {newItem};
         }
         else if (answer == "View")
         {
@@ -48,6 +48,7 @@ namespace ToDoList.Models
         else if (answer == "Q")
         {
           x =1;
+          Console.WriteLine("Goodbye");
           break;
         }
         else
