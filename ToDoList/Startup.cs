@@ -25,6 +25,7 @@ namespace ToDoList
 
     public void Configure(IApplicationBuilder app)
     {
+      app.UseDeveloperExceptionPage();//this is the debugger for Razor view
       app.UseMvc(routes =>
       {
         routes.MapRoute(

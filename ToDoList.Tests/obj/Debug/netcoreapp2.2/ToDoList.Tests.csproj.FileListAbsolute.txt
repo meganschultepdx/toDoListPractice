@@ -15,3 +15,9 @@
 /Users/Guest/Desktop/csharp-to-do-list-example/ToDoList.Tests/obj/Debug/netcoreapp2.2/ToDoList.Tests.csproj.CopyComplete
 /Users/Guest/Desktop/csharp-to-do-list-example/ToDoList.Tests/obj/Debug/netcoreapp2.2/ToDoList.Tests.dll
 /Users/Guest/Desktop/csharp-to-do-list-example/ToDoList.Tests/obj/Debug/netcoreapp2.2/ToDoList.Tests.pdb
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList.Tests/obj/Debug/netcoreapp2.2/ToDoList.Tests.csprojAssemblyReference.cache
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList.Tests/obj/Debug/netcoreapp2.2/ToDoList.Tests.csproj.CoreCompileInputs.cache
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList.Tests/obj/Debug/netcoreapp2.2/ToDoList.Tests.AssemblyInfoInputs.cache
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList.Tests/obj/Debug/netcoreapp2.2/ToDoList.Tests.AssemblyInfo.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList.Tests/obj/Debug/netcoreapp2.2/ToDoList.Tests.dll
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList.Tests/obj/Debug/netcoreapp2.2/ToDoList.Tests.pdb

@@ -30,4 +30,7 @@
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.RazorTargetAssemblyInfo.cs
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.Views.pdb
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.csproj.CopyComplete
-/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Home/CreateForm.g.cshtml.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Index.g.cshtml.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/DeleteAll.g.cshtml.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/New.g.cshtml.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Show.g.cshtml.cs
