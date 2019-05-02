@@ -34,3 +34,6 @@
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/DeleteAll.g.cshtml.cs
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/New.g.cshtml.cs
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Show.g.cshtml.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Categories/Index.g.cshtml.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Categories/New.g.cshtml.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Categories/Show.g.cshtml.cs

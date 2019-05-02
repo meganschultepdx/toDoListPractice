@@ -41,5 +41,16 @@ namespace ToDoList.Models
   {
     _instances.Clear();
   }
+
+  public List<Item> GetItems()
+  {
+    return _items;
+  }
+//add items to category list
+  public void AddItem(Item item)
+    {
+      _items.Add(item);
+    }
+
   }
 }
