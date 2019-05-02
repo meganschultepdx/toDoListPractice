@@ -67,3 +67,4 @@
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.pdb
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.csproj.CopyComplete
 >>>>>>> 81e20b8a5b6b2259806c98534b1ecdcbea8c6a20
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Home/FavoritePhotos.g.cshtml.cs
