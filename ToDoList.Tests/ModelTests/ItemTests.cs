@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System;
 using ToDoList.Models;
-using MySql.Data.MySqlClient;
+
 
 namespace ToDoList.Tests
 {
@@ -92,6 +92,9 @@ namespace ToDoList.Tests
       testItem.Save();
       List<Item> result = Item.GetAll();
       List<Item> testList = new List<Item>{testItem};
+      Console.WriteLine(result[result.Count -1].GetId());
+      Console.WriteLine(testList[testList.Count -1].GetId());
+
 
       //Assert
       CollectionAssert.AreEqual(testList, result);
@@ -132,7 +135,19 @@ namespace ToDoList.Tests
       //Assert
       Assert.AreEqual(testId, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectItemFromDatabase_Item()
+    {
+      //Arrange
+      Item testItem = new Item("Mow the lawn");
+      testItem.Save();
 
+      //Act
+      Item foundItem = Item.Find(testItem.GetId());
+
+      //Assert
+      Assert.AreEqual(testItem, foundItem);
+    }
 
 
 
