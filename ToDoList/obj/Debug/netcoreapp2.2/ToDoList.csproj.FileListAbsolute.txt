@@ -30,14 +30,9 @@
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.RazorTargetAssemblyInfo.cs
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.Views.pdb
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.csproj.CopyComplete
-/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Index.g.cshtml.cs
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/DeleteAll.g.cshtml.cs
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/New.g.cshtml.cs
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Show.g.cshtml.cs
-<<<<<<< HEAD
-/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Categories/Index.g.cshtml.cs
-/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Categories/New.g.cshtml.cs
-/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Categories/Show.g.cshtml.cs
 =======
 /Users/Guest/Desktop/toDoListPractice/ToDoList/bin/Debug/netcoreapp2.2/ToDoList.deps.json
 /Users/Guest/Desktop/toDoListPractice/ToDoList/bin/Debug/netcoreapp2.2/ToDoList.runtimeconfig.json
@@ -66,5 +61,10 @@
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.dll
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.pdb
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.csproj.CopyComplete
+<<<<<<< HEAD
 >>>>>>> 81e20b8a5b6b2259806c98534b1ecdcbea8c6a20
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Home/FavoritePhotos.g.cshtml.cs
+>>>>>>> a4355bd60da13b5009a5652e6feae7e88a62391a
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Categories/Index.g.cshtml.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Categories/New.g.cshtml.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Categories/Show.g.cshtml.cs

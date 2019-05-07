@@ -31,6 +31,8 @@ namespace ToDoList
         routes.MapRoute(
           name: "default",
           template: "{controller=Home}/{action=Index}/{id?}");
+
+          app.UseStaticFiles();
       });
 
         app.Run(async (context) =>
@@ -39,5 +41,9 @@ namespace ToDoList
         });
 
     }
+  }
+  public static class DBConfiguration
+  {
+    public static string ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=to_do_list;";
   }
 }
