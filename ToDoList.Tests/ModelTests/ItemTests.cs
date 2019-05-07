@@ -71,71 +71,70 @@ namespace ToDoList.Tests
     }
 
     [TestMethod]
+    public void Equals_ReturnsTrueIfDescriptionsAreTheSame_Item()
+    {
+      // Arrange, Act
+      Item firstItem = new Item("Mow the lawn");
+      Item secondItem = new Item("Mow the lawn");
+
+      // Assert
+      Assert.AreEqual(firstItem, secondItem);
+    }
+
+    [
+    TestMethod]
+    public void Save_SavesToDatabase_ItemList()
+    {
+      //Arrange
+      Item testItem = new Item("Mow the lawn");
+
+      //Act
+      testItem.Save();
+      List<Item> result = Item.GetAll();
+      List<Item> testList = new List<Item>{testItem};
+
+      //Assert
+      CollectionAssert.AreEqual(testList, result);
+    }
+
+    [TestMethod]
     public void GetAll_ReturnsItems_ItemList()
     {
       //Arrange
       string description01 = "Walk the dog";
       string description02 = "Wash the dishes";
       Item newItem1 = new Item(description01);
+      newItem1.Save();
       Item newItem2 = new Item(description02);
+      newItem2.Save();
       List<Item> newList = new List<Item> { newItem1, newItem2 };
 
       //Act
       List<Item> result = Item.GetAll();
-
-      foreach (Item thisItem in result)
-      {
-        Console.WriteLine("Output from second GetAll test: " + thisItem.GetDescription());
-      }
 
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
 
     [TestMethod]
-  public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
-  {
-    //Arrange
-    string description = "Walk the dog.";
-    Item newItem = new Item(description);
+    public void Save_AssignsIdToObject_Id()
+    {
+      //Arrange
+      Item testItem = new Item("Mow the lawn");
 
-    //Act
-    int result = newItem.GetId();
+      //Act
+      testItem.Save();
+      Item savedItem = Item.GetAll()[0];
 
-    //Assert
-    Assert.AreEqual(1, result);
-  }
+      int result = savedItem.GetId();
+      int testId = testItem.GetId();
 
-  [TestMethod]
-  public void Find_ReturnsCorrectItem_Item()
-  {
-    //Arrange
-    string description01 = "Walk the dog";
-    string description02 = "Wash the dishes";
-    Item newItem1 = new Item(description01);
-    Item newItem2 = new Item(description02);
+      //Assert
+      Assert.AreEqual(testId, result);
+    }
 
-    //Act
-    Item result = Item.Find(2);
 
-    //Assert
-    Assert.AreEqual(newItem2, result);
-  }
 
-  [TestMethod]
-  public void Save_SavesToDatabase_ItemList()
-  {
-    //Arrange
-    Item testItem = new Item("Mow the lawn");
-
-    //Act
-    testItem.Save();
-    List<Item> result = Item.GetAll();
-    List<Item> testList = new List<Item>{testItem};
-
-    //Assert
-    CollectionAssert.AreEqual(testList, result);
-  }
 
 
   }
