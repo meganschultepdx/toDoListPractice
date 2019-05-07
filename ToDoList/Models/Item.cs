@@ -48,7 +48,7 @@ namespace ToDoList.Models
         int itemId = rdr.GetInt32(0);
         string itemDescription = rdr.GetString(1);
         //once data collected we can use it to instantiate new Item objects and add them to out allItems list. must reconstruct data into c# object with constructor
-        Item newItem = new Item(itemDescription, itemId);
+        Item newItem = new Item(itemDescription);
         allItems.Add(newItem);
       }
 
@@ -77,6 +77,40 @@ namespace ToDoList.Models
       conn.Dispose();
      }
     }
+
+    public override bool Equals(System.Object otherItem)
+    {
+      if (!(otherItem is Item))
+      {
+        return false;
+      }
+      else
+      {
+        Item newItem = (Item) otherItem;
+        bool descriptionEquality = (this.GetDescription() == newItem.GetDescription());
+        return (descriptionEquality);
+      }
+    }
+
+    public void Save()
+   {
+     MySqlConnection conn = DB.Connection();
+     conn.Open();
+     var cmd = conn.CreateCommand() as MySqlCommand;
+     cmd.CommandText = @"INSERT INTO items (description) VALUES (@ItemDescription);";
+     MySqlParameter description = new MySqlParameter();
+     description.ParameterName = "@ItemDescription";
+     description.Value = this._description;
+
+     // more logic will go here in a moment
+
+      conn.Close();
+      if (conn != null)
+      {
+        conn.Dispose();
+      }
+   }
+
     //
     // public static Item Find(int searchId)
     // {

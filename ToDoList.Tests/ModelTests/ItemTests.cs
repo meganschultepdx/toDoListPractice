@@ -58,18 +58,13 @@ namespace ToDoList.Tests
     }
 
     [TestMethod]
-    public void GetAll_ReturnsEmptyList_ItemList()
+    public void GetAll_ReturnsEmptyListFromDatabase_ItemList()
     {
       //Arrange
       List<Item> newList = new List<Item> { };
 
       //Act
       List<Item> result = Item.GetAll();
-
-      foreach (Item thisItem in result)
-      {
-        Console.WriteLine("Output from empty list GetAll test: " + thisItem.GetDescription());
-      }
 
       //Assert
       CollectionAssert.AreEqual(newList, result);
@@ -125,6 +120,21 @@ namespace ToDoList.Tests
 
     //Assert
     Assert.AreEqual(newItem2, result);
+  }
+
+  [TestMethod]
+  public void Save_SavesToDatabase_ItemList()
+  {
+    //Arrange
+    Item testItem = new Item("Mow the lawn");
+
+    //Act
+    testItem.Save();
+    List<Item> result = Item.GetAll();
+    List<Item> testList = new List<Item>{testItem};
+
+    //Assert
+    CollectionAssert.AreEqual(testList, result);
   }
 
 
