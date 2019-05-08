@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using System;
 
 namespace ToDoList.Models
 {
@@ -11,7 +12,7 @@ namespace ToDoList.Models
     public Item (string description, int id = 0)
     {
       _description = description;
-      _id = _id;
+      _id = id;
     }
 
     public string GetDescription()
@@ -68,38 +69,22 @@ namespace ToDoList.Models
     }
 
 
-    public static void ClearAll()
-    {
-      MySqlConnection conn = DB.Connection();
-      conn.Open();
-      //create and open a new database connection
-      var cmd = conn.CreateCommand() as MySqlCommand;
-      //We call DB.Connection() to create our conn object, representing our connection to the database, and then call Open() upon it to open the connection. Remember, the DB before the method name here refers to the DB class defined in Database.cs
-      cmd.CommandText = @"DELETE FROM items;";
-      //built in command that modifies data instead of querying and returning it
-      cmd.ExecuteNonQuery();
-      //close databases
-      conn.Close();
-      if (conn != null)
-      {
-        conn.Dispose();
-      }
-    }
 
     public override bool Equals(System.Object otherItem)
-    {
-      if (!(otherItem is Item))
-      {
-        return false;
-      }
-      else
-      {
-        Item newItem = (Item) otherItem;
-      bool idEquality = (this.GetId() == newItem.GetId());
-      bool descriptionEquality = (this.GetDescription() == newItem.GetDescription());
+ {
+   if (!(otherItem is Item))
+   {
+     return false;
+   }
+   else
+   {
+      Item newItem = (Item) otherItem;
+      bool idEquality = this.GetId() == newItem.GetId();
+      bool descriptionEquality = this.GetDescription() == newItem.GetDescription();
       return (idEquality && descriptionEquality);
-      }
     }
+ }
+
 
     public void Save()
     {
@@ -148,6 +133,24 @@ namespace ToDoList.Models
       return foundItem;  // This line is new!
     }
 
+
+    public static void ClearAll()
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      //create and open a new database connection
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      //We call DB.Connection() to create our conn object, representing our connection to the database, and then call Open() upon it to open the connection. Remember, the DB before the method name here refers to the DB class defined in Database.cs
+      cmd.CommandText = @"DELETE FROM items;";
+      //built in command that modifies data instead of querying and returning it
+      cmd.ExecuteNonQuery();
+      //close databases
+      conn.Close();
+      if (conn != null)
+      {
+        conn.Dispose();
+      }
+    }
 
 
 
