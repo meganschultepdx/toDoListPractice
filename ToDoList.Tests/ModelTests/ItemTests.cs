@@ -10,10 +10,6 @@ namespace ToDoList.Tests
   public class ItemTest : IDisposable
   {
 
-    public void Dispose()
-    {
-      Item.ClearAll();
-    }
 
     public ItemTest()
     {
@@ -149,6 +145,10 @@ namespace ToDoList.Tests
       Assert.AreEqual(testItem, foundItem);
     }
 
+    public void Dispose()
+    {
+      Item.ClearAll();
+    }
 
 
 
