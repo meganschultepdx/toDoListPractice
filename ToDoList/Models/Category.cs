@@ -98,13 +98,33 @@ namespace ToDoList.Models
 
     public List<Item> GetItems()
     {
-      return _items;
+      List<Item> allCategoryItems = new List<Item> {};
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"SELECT * FROM items WHERE category_id = @category_id;";
+      MySqlParameter categoryId = new MySqlParameter();
+      categoryId.ParameterName = "@category_id";
+      categoryId.Value = this._id;
+      cmd.Parameters.Add(categoryId);
+      var rdr = cmd.ExecuteReader() as MySqlDataReader;
+      while(rdr.Read())
+      {
+        int itemId = rdr.GetInt32(0);
+        string itemDescription = rdr.GetString(1);
+        int itemCategoryId = rdr.GetInt32(2);
+        Item newItem = new Item(itemDescription, itemCategoryId, itemId);
+        allCategoryItems.Add(newItem);
+      }
+      conn.Close();
+      if (conn != null)
+      {
+        conn.Dispose();
+      }
+      return allCategoryItems;
     }
-    //add items to category list
-    public void AddItem(Item item)
-    {
-      _items.Add(item);
-    }
+
+
 
     public override bool Equals(System.Object otherCategory)
     {

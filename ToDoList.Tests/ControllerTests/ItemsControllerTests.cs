@@ -37,5 +37,19 @@ namespace ToDoList.Tests
       //   Assert.AreEqual(result, "Index");
       // }
 
+    //   [TestMethod]
+    // public void Index_HasCorrectModelType_ItemList()
+    // {
+    //   //Arrange
+    //   ItemController controller = new ItemController();
+    //   ViewResult indexView = controller.Index() as ViewResult;
+    //
+    //   //Act
+    //   var result = indexView.ViewData.Model;
+    //
+    //   //Assert
+    //   Assert.IsInstanceOfType(result, typeof(List<Item>));
+    // }
+
     }
 }
