@@ -161,6 +161,29 @@ namespace ToDoList.Tests
       Assert.AreEqual(secondDescription, result);
     }
 
+    [TestMethod]
+    public void DeleteItem_DeletesItemFromDatabase_Id()
+    {
+      //Arrange
+      string item01 = "Walk the dog";
+      string item02 = "Wash the dishes";
+
+      Item testItem = new Item(item01, 1);
+      Item testItem2 = new Item(item02, 1);
+
+      //Act
+      testItem.Save();
+      testItem2.Save();
+
+      testItem.DeleteItem(testItem.GetId());
+
+      int testId = testItem2.GetId();
+
+
+      //Assert
+      Assert.AreEqual(testId, Item.GetAll()[0].GetId());
+    }
+
     // [TestMethod]
     // public void GetCategoryId_ReturnsItemsParentCategoryId_Int()
     // {

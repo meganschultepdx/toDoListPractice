@@ -51,7 +51,6 @@
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.TagHelpers.output.cache
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.RazorCoreGenerate.cache
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.g.cshtml.cs
-/Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/DeleteAll.g.cshtml.cs
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/New.g.cshtml.cs
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Show.g.cshtml.cs
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.RazorTargetAssemblyInfo.cache
