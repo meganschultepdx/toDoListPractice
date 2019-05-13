@@ -2997,7 +2997,7 @@
           "lib/netcoreapp1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll": {}
         }
       },
-      "MySqlConnector/0.53.0": {
+      "MySqlConnector/0.54.0": {
         "type": "package",
         "compile": {
           "lib/netcoreapp2.1/MySqlConnector.dll": {}
@@ -4956,7 +4956,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "MySqlConnector": "0.53.0"
+          "MySqlConnector": "0.54.0"
         },
         "compile": {
           "bin/placeholder/ToDoList.dll": {}
@@ -8101,10 +8101,10 @@
         "mstest.testframework.nuspec"
       ]
     },
-    "MySqlConnector/0.53.0": {
-      "sha512": "4jP7FFwcjNLoGD67jVQVUjBIPEXNZ8IW5fQEFhjoPHi+7xuJyUDXOBvBix+HrfeJy6T+Wc5NVQJwgUUuBeljNA==",
+    "MySqlConnector/0.54.0": {
+      "sha512": "vi/a+3pBB9IGZRVFxGy5GcEeb688mPPGaeQQoWVaNukLeL6G6NU749gbZK2S+UeiEvVgmYRPeB6J9xfy2yaGkg==",
       "type": "package",
-      "path": "mysqlconnector/0.53.0",
+      "path": "mysqlconnector/0.54.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8114,7 +8114,7 @@
         "lib/netcoreapp2.1/MySqlConnector.dll",
         "lib/netstandard1.3/MySqlConnector.dll",
         "lib/netstandard2.0/MySqlConnector.dll",
-        "mysqlconnector.0.53.0.nupkg.sha512",
+        "mysqlconnector.0.54.0.nupkg.sha512",
         "mysqlconnector.nuspec"
       ]
     },
