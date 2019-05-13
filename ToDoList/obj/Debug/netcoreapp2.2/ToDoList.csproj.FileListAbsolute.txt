@@ -71,3 +71,4 @@
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Categories/Show.g.cshtml.cs
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Home/FavoritePhotos.g.cshtml.cs
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Edit.g.cshtml.cs
+/Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Index.g.cshtml.cs

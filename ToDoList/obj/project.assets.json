@@ -2709,7 +2709,7 @@
           }
         }
       },
-      "MySqlConnector/0.53.0": {
+      "MySqlConnector/0.54.0": {
         "type": "package",
         "compile": {
           "lib/netcoreapp2.1/MySqlConnector.dll": {}
@@ -7216,10 +7216,10 @@
         "version.txt"
       ]
     },
-    "MySqlConnector/0.53.0": {
-      "sha512": "4jP7FFwcjNLoGD67jVQVUjBIPEXNZ8IW5fQEFhjoPHi+7xuJyUDXOBvBix+HrfeJy6T+Wc5NVQJwgUUuBeljNA==",
+    "MySqlConnector/0.54.0": {
+      "sha512": "vi/a+3pBB9IGZRVFxGy5GcEeb688mPPGaeQQoWVaNukLeL6G6NU749gbZK2S+UeiEvVgmYRPeB6J9xfy2yaGkg==",
       "type": "package",
-      "path": "mysqlconnector/0.53.0",
+      "path": "mysqlconnector/0.54.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7229,7 +7229,7 @@
         "lib/netcoreapp2.1/MySqlConnector.dll",
         "lib/netstandard1.3/MySqlConnector.dll",
         "lib/netstandard2.0/MySqlConnector.dll",
-        "mysqlconnector.0.53.0.nupkg.sha512",
+        "mysqlconnector.0.54.0.nupkg.sha512",
         "mysqlconnector.nuspec"
       ]
     },
@@ -12093,7 +12093,7 @@
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "MySqlConnector >= 0.53.0"
+      "MySqlConnector >= 0.54.0"
     ]
   },
   "packageFolders": {
@@ -12154,7 +12154,7 @@
           },
           "MySqlConnector": {
             "target": "Package",
-            "version": "[0.53.0, )"
+            "version": "[0.54.0, )"
           }
         },
         "imports": [
