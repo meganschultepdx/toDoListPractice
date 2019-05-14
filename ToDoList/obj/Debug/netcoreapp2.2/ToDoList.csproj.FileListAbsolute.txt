@@ -30,7 +30,6 @@
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.RazorTargetAssemblyInfo.cs
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.Views.pdb
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.csproj.CopyComplete
-/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/DeleteAll.g.cshtml.cs
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/New.g.cshtml.cs
 /Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Show.g.cshtml.cs
 =======
@@ -72,3 +71,6 @@
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Home/FavoritePhotos.g.cshtml.cs
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Edit.g.cshtml.cs
 /Users/Guest/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Index.g.cshtml.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Edit.g.cshtml.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Items/Index.g.cshtml.cs
+/Users/meganschulte/Desktop/toDoListPractice/ToDoList/obj/Debug/netcoreapp2.2/Razor/Views/Categories/Edit.g.cshtml.cs

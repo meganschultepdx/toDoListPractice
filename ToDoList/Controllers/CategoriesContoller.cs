@@ -54,6 +54,31 @@ namespace ToDoList.Controllers
       return RedirectToAction("Show",  new { id = categoryId });
     }
 
+    [HttpPost("/category/{categoryId}/delete")]
+    public ActionResult Delete(int categoryId)
+    {
+      Category Category = Category.Find(categoryId);
+      Category.DeleteCategory();
+      List<Category> allCategories = Category.GetAll();
+      return RedirectToAction("Index", allCategories);
+    }
+
+    // [HttpGet("/category/{categoryId}/edit")]
+    // public ActionResult Edit(int categoryId)
+    // {
+    //   Category category = Category.Find(categoryId);
+    //   return View(category);
+    // }
+    //
+    // [HttpPost("/category/{categoryId}")]
+    // public ActionResult Update(int categoryId, string newDescription)
+    // {
+    //   Category category = Category.Find(categoryId);
+    //   item.Edit(newDescription);
+    //   List<Category> allCategorys = Category.GetAll();
+    //   return RedirectToAction("Index", allCategorys);
+    // }
+
 
   }
 }

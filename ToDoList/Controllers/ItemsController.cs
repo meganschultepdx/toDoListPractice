@@ -55,41 +55,30 @@ namespace ToDoList.Controllers
     }
 
 
-    [HttpPost("/categories/{categoryId}/items/{itemId}/delete")]
-    public ActionResult Delete(int categoryId, int itemId)
+    [HttpPost("/items/{itemId}/delete")]
+    public ActionResult Delete(int itemId)
+    {
+      Item Item = Item.Find(itemId);
+      Item.DeleteItem();
+      List<Item> allItems = Item.GetAll();
+      return RedirectToAction("Index", allItems);
+    }
+
+    [HttpGet("/items/{itemId}/edit")]
+    public ActionResult Edit(int itemId)
     {
       Item item = Item.Find(itemId);
-      item.DeleteItem();
-      Dictionary<string, object> model = new Dictionary<string, object>();
-      Category foundCategory = Category.Find(categoryId);
-      List<Item> categoryItems = foundCategory.GetItems();
-      model.Add("items", categoryItems);
-      model.Add("category", foundCategory);
-      return RedirectToAction("Show", "Categories");
+      return View(item);
     }
-    //
-    // [HttpGet("/categories/{categoryId}/items/{itemId}/edit")]
-    // public ActionResult Edit(int categoryId, int itemId)
-    // {
-    //   Dictionary<string, object> model = new Dictionary<string, object>();
-    //   Category category = Category.Find(categoryId);
-    //   model.Add("category", category);
-    //   Item item = Item.Find(itemId);
-    //   model.Add("item", item);
-    //   return View(model);
-    // }
-    //
-    // [HttpPost("/categories/{categoryId}/items/{itemId}")]
-    // public ActionResult Update(int categoryId, int itemId, string newDescription)
-    // {
-    //   Item item = Item.Find(itemId);
-    //   item.Edit(newDescription);
-    //   Dictionary<string, object> model = new Dictionary<string, object>();
-    //   Category category = Category.Find(categoryId);
-    //   model.Add("category", category);
-    //   model.Add("item", item);
-    //   return View("Show", model);
-    // }
+
+    [HttpPost("/items/{itemId}")]
+    public ActionResult Update(int itemId, string newDescription)
+    {
+      Item item = Item.Find(itemId);
+      item.Edit(newDescription);
+      List<Item> allItems = Item.GetAll();
+      return RedirectToAction("Index", allItems);
+    }
 
   }
 }
