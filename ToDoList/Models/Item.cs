@@ -7,13 +7,16 @@ namespace ToDoList.Models
   public class Item
   {
     private string _description;
+    private string _specialNote;
+    private DateTime _dueDate;
     private int _id;
 
 
-    public Item (string description, int id = 0)
+    public Item (string description, string specialNote, int id = 0)
     {
       _description = description;
-
+      _specialNote = specialNote;
+      //_dueDate = dueDate;
       _id = id;
     }
 
@@ -27,9 +30,34 @@ namespace ToDoList.Models
       _description = newDescription;
     }
 
+    public string GetSpecialNote()
+    {
+      return _specialNote;
+    }
+
+    public void SetSpecialNote(string newSpecialNote)
+    {
+      _specialNote = newSpecialNote;
+    }
+
+    // public DateTime GetDueDate()
+    // {
+    //   return _dueDate;
+    // }
+    //
+    // public void SetDueDate(DateTime newDueDate)
+    // {
+    //   _dueDate = newDueDate;
+    // }
+
     public int GetId()
     {
       return _id;
+    }
+
+    public void SetId(int newId)
+    {
+      _id = newId;
     }
 
 
@@ -39,13 +67,16 @@ namespace ToDoList.Models
       MySqlConnection conn = DB.Connection();
       conn.Open();
       var cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"SELECT * FROM items;";
+      cmd.CommandText = @"SELECT * FROM items ORDER BY dueDate desc;";
       var rdr = cmd.ExecuteReader() as MySqlDataReader;
       while(rdr.Read())
       {
         int itemId = rdr.GetInt32(0);
         string itemDescription = rdr.GetString(1);
-        Item newItem = new Item(itemDescription, itemId);
+        //DateTime dueDate = rdr.GetDateTime(2);
+        string itemSpecialNote = rdr.GetString(3);
+
+        Item newItem = new Item(itemDescription, itemSpecialNote, itemId);
         allItems.Add(newItem);
       }
       conn.Close();
@@ -111,13 +142,26 @@ namespace ToDoList.Models
       MySqlConnection conn = DB.Connection();
       conn.Open();
       var cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"INSERT INTO items (description) VALUES (@description);";
+      cmd.CommandText = @"INSERT INTO items (description, special_note) VALUES (@description, @specialNote);";
+
       MySqlParameter description = new MySqlParameter();
       description.ParameterName = "@description";
       description.Value = this._description;
+
+      MySqlParameter specialNote = new MySqlParameter();
+      specialNote.ParameterName = "@specialNote";
+      specialNote.Value = this._specialNote;
+
+      // MySqlParameter dueDate = new MySqlParameter();
+      // dueDate.ParameterName = "@dueDate";
+      // dueDate.Value = this._dueDate;
+
       cmd.Parameters.Add(description);
+      cmd.Parameters.Add(specialNote);
+      // cmd.Parameters.Add(dueDate);
       cmd.ExecuteNonQuery();
       _id = (int) cmd.LastInsertedId;
+
       conn.Close();
       if (conn != null)
       {
@@ -139,12 +183,16 @@ namespace ToDoList.Models
       var rdr = cmd.ExecuteReader() as MySqlDataReader;
       int itemId = 0;
       string itemName = "";
+      // DateTime itemDueDate = "";
+      string itemSpecialNote = "";
       while(rdr.Read())
       {
         itemId = rdr.GetInt32(0);
         itemName = rdr.GetString(1);
+        // itemDueDate = rdr.GetDateTime(2);
+        itemSpecialNote = rdr.GetString(3);
       }
-      Item newItem = new Item(itemName, itemId);
+      Item newItem = new Item(itemName, itemSpecialNote, itemId);
       conn.Close();
       if (conn != null)
       {

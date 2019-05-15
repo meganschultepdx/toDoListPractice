@@ -1,7 +1,8 @@
 @using ToDoList.Models;
 
 <h1>To Do List</h1>
-<h2>Item: @Model["selectedItem"].GetDescription()</h2>
+<h2>Item: @Model["selectedItem"].GetDescription()</h2><br>
+<h2>Special Note: @Model["selectedItem"].GetSpecialNote()</h2>
 <hr />
 
 @if (@Model["itemCategories"].Count != 0)

@@ -8,9 +8,18 @@
     <h1>Add a new item</h1>
 
     <form action="/items" method="post">
+
       <label for="description">Item description:</label>
       <input id="description" name="description" type="text">
+
+      <label for="specialNote">Special Notes</label>
+      <input id="specialNote" name="specialNote" type="text">
+
+      <!-- @*<label for="dueDate">Item Due Date:</label> -->
+      <!-- <input id="dueDate" name="dueDate" type="text">*@ -->
+
       <button type="submit">Add new item</button>
+
     </form>
 
     <p><a href="/">Back home</a></p>

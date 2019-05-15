@@ -22,15 +22,13 @@ namespace ToDoList.Controllers
     }
 
     [HttpPost("/items")]
-    public ActionResult Create(string description)
+    public ActionResult Create(string description, string specialNote)
     {
-      Item newItem = new Item(description);
+      Item newItem = new Item(description, specialNote);
       newItem.Save();
       List<Item> allItems = Item.GetAll();
       return View("Index", allItems);
     }
-
-
 
     [HttpGet("/items/{id}")]
     public ActionResult Show(int id)

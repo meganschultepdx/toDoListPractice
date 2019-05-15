@@ -129,7 +129,10 @@ namespace ToDoList.Models
         {
           int thisItemId = itemQueryRdr.GetInt32(0);
           string itemDescription = itemQueryRdr.GetString(1);
-          Item foundItem = new Item(itemDescription, thisItemId);
+          //DateTime itemDueDate = itemQueryRDR.GetDateTime(2);
+          string itemSpecialNote = itemQueryRdr.GetString(3);
+
+          Item foundItem = new Item(itemDescription, itemSpecialNote, thisItemId);
           items.Add(foundItem);
         }
         itemQueryRdr.Dispose();
@@ -179,10 +182,29 @@ namespace ToDoList.Models
       }
     }
 
-    public void Delete()
+    // public void DeleteCategory()
+    // {
+    //   MySqlConnection conn = DB.Connection();
+    //   conn.Open();
+    //   var cmd = conn.CreateCommand() as MySqlCommand;
+    //   cmd.CommandText = @"DELETE FROM categories WHERE id = @thisId;";
+    //   MySqlParameter thisId = new MySqlParameter();
+    //   thisId.ParameterName = "@thisId";
+    //   thisId.Value = _id;
+    //   cmd.Parameters.Add(thisId);
+    //   cmd.ExecuteNonQuery();
+    //   conn.Close();
+    //   if (conn != null)
+    //   {
+    //     conn.Dispose();
+    //   }
+    // }
+
+    public void DeleteCategory()
     {
       MySqlConnection conn = DB.Connection();
       conn.Open();
+      //changed below, Delete from categories where id = @CategoryId;
       MySqlCommand cmd = new MySqlCommand("DELETE FROM categories WHERE id = @CategoryId; DELETE FROM categories_items WHERE category_id = @CategoryId;", conn);
       MySqlParameter categoryIdParameter = new MySqlParameter();
       categoryIdParameter.ParameterName = "@CategoryId";
@@ -240,23 +262,6 @@ namespace ToDoList.Models
     //   }
     // }
 
-    public void DeleteCategory()
-    {
-      MySqlConnection conn = DB.Connection();
-      conn.Open();
-      var cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"DELETE FROM categories WHERE id = @thisId;";
-      MySqlParameter thisId = new MySqlParameter();
-      thisId.ParameterName = "@thisId";
-      thisId.Value = _id;
-      cmd.Parameters.Add(thisId);
-      cmd.ExecuteNonQuery();
-      conn.Close();
-      if (conn != null)
-      {
-        conn.Dispose();
-      }
-    }
 
 
   }
